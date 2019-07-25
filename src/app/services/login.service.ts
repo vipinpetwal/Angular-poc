@@ -6,14 +6,7 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-getrecords()
-  {
-   
-    const details=[{"pass":"test","username":"rest"},{"pass":"test","username":"xyz"},{"pass":"test","username":"abcd"}];    
-    
-    return details;
 
-  }
 
   getsamplerecord(payload)
   {
