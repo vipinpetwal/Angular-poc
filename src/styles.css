@@ -1,0 +1,14 @@
+/* Add application styles & imports to this file! */
+
+label {    
+    font-weight: 900
+}
+
+.error
+{
+    color:red;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
