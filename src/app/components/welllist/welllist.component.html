@@ -1,0 +1,54 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<br><br>
+			<div class="row">
+				<div class="col-md-12">
+						<app-well [sourcekey] = "sourcekey" (welldata)=newWellData($event) ></app-well>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6">
+					<table>
+						<thead>
+							<tr>
+								<th>
+									Name
+								</th>
+								<th>
+									Type
+								</th>
+								<th>
+									Source
+								</th>
+							</tr>
+						</thead>
+
+						<tbody *ngIf="listdata && listdata.length;else norecordfound">
+							<tr *ngFor="let data of listdata" [ngClass]="{'datacolor': true}">
+								<td>{{data.name}}</td>
+								<td [ngStyle]="{'background-color':getbgcolor(data.type),'color':getcolor(data.type)}">{{data.type}}</td>
+								<td (click)="sourceClick(data)">{{data.source}}</td>
+							</tr>
+						</tbody>
+
+					</table>
+					<ng-template #norecordfound>
+						<tfoot>
+							<tr>
+								<td colspan="3" align="center">
+									No Record Found
+								</td>
+							</tr>
+						</tfoot>
+
+					</ng-template>
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
