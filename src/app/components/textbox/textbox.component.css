@@ -1,0 +1,18 @@
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+a:hover{
+  color:blue !important
+}
+
+a{
+  text-decoration: underline !important;  
+}
+
+
+#textcolor{
+  color: blue;
+}
