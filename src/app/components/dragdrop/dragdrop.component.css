@@ -1,0 +1,15 @@
+#div1{
+    height: 350px;    
+    border: 1px solid green;
+}
+
+#div2{     
+    border: 1px solid orange;
+    padding-left: 0px !important;
+    padding-right: 0px !important;  
+}
+
+.drag-box {
+    background-color: lightblue;
+    margin-top: .25em;      
+  }
