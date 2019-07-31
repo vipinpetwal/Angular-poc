@@ -7,7 +7,7 @@ export class DragdropService {
   constructor() { }
 
 
-  getsamplerecord() {
+  getComponent() {
     var data: Draglist[] = [{ id: 1, name: "Button" }, { id: 2, name: "Textbox" }, { id: 3, name: "Header" }, { id: 4, name: "Footer" }];
     return data;
   }
