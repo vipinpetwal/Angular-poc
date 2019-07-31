@@ -23,7 +23,7 @@ export class DragdropComponent implements OnInit {
   constructor(private dragdropservice: DragdropService, private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
-    this.activeList = this.dragdropservice.getsamplerecord();
+    this.activeList = this.dragdropservice.getComponent();
   }
 
   drop(ev, test) {
