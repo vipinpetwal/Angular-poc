@@ -1,0 +1,52 @@
+<div class="container-fluid">
+	<br /><br />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<br />
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-4">
+					<input type="text" placeholder="Search File Name" name="filename" [(ngModel)]="filename" />
+					&nbsp;<button (click)="checkFile(filename)" [disabled]="!filename">Search</button>
+				</div>
+			</div><br/>
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6">
+					<table>
+						<thead>
+							<tr>
+								<th>
+									Id
+								</th>
+								<th>
+									File Name
+								</th>
+							</tr>
+						</thead>
+
+						<tbody *ngIf="filelist && filelist.length;else norecordfound">
+							<tr *ngFor="let file of filelist" let i=index>
+								<td>{{file.id}}</td>
+								<td>{{file.name}}</td>
+							</tr>
+						</tbody>
+
+					</table>
+					<ng-template #norecordfound>
+						<tfoot>
+							<tr>
+								<td colspan="2" align="center">
+									No Record Found
+								</td>
+							</tr>
+						</tfoot>
+
+					</ng-template>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
