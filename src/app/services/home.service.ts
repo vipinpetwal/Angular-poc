@@ -6,6 +6,12 @@ export class HomeService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getFilerecord(payload)
+  {
+    console.log("payload====>",payload)
+    return this.httpClient.post('api/v1/displayfilelist',payload);
+  }
+
 
   getrecords()
   {
@@ -17,7 +23,7 @@ export class HomeService {
 
   getemprecord()
   {
-    console.log("payload9++++++++++++")
+    console.log("payload++++++++++++")
     return this.httpClient.get('api/v1/displaydata');
   }
 
