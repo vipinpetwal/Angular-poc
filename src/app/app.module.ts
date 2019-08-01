@@ -22,6 +22,7 @@ import { TextboxComponent } from './components/textbox/textbox.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DragdropDirective } from './dragdrop.directive';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
@@ -36,7 +37,8 @@ import { DragdropDirective } from './dragdrop.directive';
     TextboxComponent,
     HeaderComponent,
     FooterComponent,
-    DragdropDirective
+    DragdropDirective,
+    SearchComponent
   ],
   entryComponents: [ ButtonComponent,TextboxComponent,HeaderComponent,FooterComponent],
   bootstrap: [AppComponent],
