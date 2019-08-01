@@ -22,7 +22,7 @@ export class Interceptor implements HttpInterceptor {
 
     // Clone the request to add the new header.
 
-    if(req.method == "GET" && req.url != "api/v1/login")
+    if(req.url != "api/v1/login")
     {
          req = req.clone({
              url:url +req.url,
